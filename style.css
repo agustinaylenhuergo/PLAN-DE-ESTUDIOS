@@ -1,0 +1,350 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #004d40; /* Verde oscuro */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #004d40;
+    margin-top: 0;
+}
+
+header h1, header h2 {
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.año-academico {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+.año-titulo {
+    font-size: 1.8em;
+    color: #004d40;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 10px;
+}
+
+.cuatrimestre-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cuatrimestres se envuelvan en pantallas pequeñas */
+    gap: 20px;
+}
+
+.cuatrimestre {
+    flex: 1; /* Ocupa espacio equitativamente */
+    min-width: 300px; /* Ancho mínimo para que no se compriman demasiado */
+    background-color: #e0f2f1; /* Verde claro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cuatrimestre-titulo {
+    font-size: 1.4em;
+    color: #00796b; /* Verde medio */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #00796b;
+    padding-bottom: 8px;
+}
+
+.materias-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.materia-item {
+    background-color: #ffffff;
+    border: 1px solid #b2dfdb; /* Borde verde muy claro */
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.materia-item:hover {
+    background-color: #ccffee; /* Fondo ligeramente más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Clases para interactividad con JavaScript */
+.materia-activa {
+    outline: 2px solid #ff9800; /* Naranja para la materia seleccionada */
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.materia-correlativa {
+    background-color: #c8e6c9; /* Verde más claro para correlativas que habilitas */
+    border-color: #4caf50;
+    font-weight: bold;
+}
+
+.materia-requerida {
+    background-color: #ffcdd2; /* Rojo claro para correlativas que necesitas */
+    border-color: #f44336;
+    font-weight: bold;
+}
+
+/* Panel de Información de la Materia */
+.info-panel {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Oculto por defecto */
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.info-panel.open {
+    right: 0; /* Visible */
+}
+
+.info-panel h3 {
+    color: #004d40;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#cerrar-info-panel {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+}
+
+#cerrar-info-panel:hover {
+    background-color: #d32f2f;
+}
+
+#detalle-contenido p {
+    margin-bottom: 10px;
+}
+
+#detalle-contenido strong {
+    color: #00796b;
+}
+
+/* Sección de Conocimientos Comunes */
+#conocimientos-comunes {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-top: 40px;
+}
+
+#conocimientos-comunes h3 {
+    color: #004d40;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#comunes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.conocimiento-comun-item {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.2s ease;
+}
+
+.conocimiento-comun-item:hover {
+    background-color: #eee;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: #f4f7f6;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    .cuatrimestre-container {
+        flex-direction: column;
+    }
+
+    .cuatrimestre {
+        min-width: unset; /* Reinicia el min-width */
+        width: 100%;
+    }
+
+    .info-panel {
+        width: 100%;
+        right: -100%; /* Ocultar completamente en móviles */
+    }
+    .info-panel.open {
+        right: 0;
+    }
+}
+/* style.css - Nuevas reglas para los estados de las materias */
+
+.materia-item.aprobada,
+.conocimiento-comun-item.aprobada {
+    background-color: #d4edda; /* Verde claro para materias aprobadas */
+    border-color: #28a745;
+    color: #155724;
+    font-weight: bold;
+}
+
+.materia-item.desbloqueada,
+.conocimiento-comun-item.desbloqueada {
+    background-color: #e2f2ff; /* Azul claro para materias desbloqueadas */
+    border-color: #007bff;
+    color: #004085;
+}
+
+.materia-item.bloqueada,
+.conocimiento-comun-item.bloqueada {
+    background-color: #f8d7da; /* Rojo claro para materias bloqueadas */
+    border-color: #dc3545;
+    color: #721c24;
+    opacity: 0.7; /* Ligeramente más opacas */
+    cursor: not-allowed;
+}
+
+.materia-item.bloqueada:hover,
+.conocimiento-comun-item.bloqueada:hover {
+    box-shadow: none; /* No mostrar sombra al pasar el ratón si está bloqueada */
+}
+
+/* Estilos para el panel de información lateral */
+.info-materia {
+    position: fixed;
+    right: -300px; /* Oculto por defecto */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-materia.open {
+    right: 0; /* Visible */
+}
+
+.info-materia h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.info-materia p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.info-materia button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.info-materia button:hover {
+    background-color: #0056b3;
+}
+
+.info-materia button.desaprobar {
+    background-color: #dc3545; /* Color para desaprobar */
+}
+
+.info-materia button.desaprobar:hover {
+    background-color: #c82333;
+}
+
+.info-materia #cerrar-info-panel {
+    background-color: #6c757d; /* Color para el botón de cerrar */
+    margin-top: auto; /* Empuja el botón al final del panel */
+}
+
+.info-materia #cerrar-info-panel:hover {
+    background-color: #5a6268;
+}
+
+/* Resaltado de la materia seleccionada */
+.materia-item.materia-activa,
+.conocimiento-comun-item.materia-activa {
+    outline: 2px solid #0056b3; /* Borde más oscuro para la activa */
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5); /* Sombra para resaltar */
+}
+
+/* Resaltado de materias requeridas (pre-requisitos) */
+.materia-item.materia-requerida,
+.conocimiento-comun-item.materia-requerida {
+    border: 2px dashed #ffc107; /* Borde punteado amarillo */
+    background-color: #fff3cd;
+}
+
+/* Resaltado de materias que esta materia habilita (post-requisitos) */
+.materia-item.materia-correlativa,
+.conocimiento-comun-item.materia-correlativa {
+    border: 2px solid #20c997; /* Borde verde-azulado */
+    background-color: #e0fbf4;
+}
