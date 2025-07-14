@@ -23,7 +23,7 @@ const planDeEstudiosData = {
             },
             {
               "codigo": "4054",
-              "asignatura": "Algebra y Geometría Analítica 1",
+              "asignatura": "Algebra y Geometría Analítica I",
               "horas_semanales": 4,
               "total_horas": 64,
               "correlatividad": ""
@@ -84,7 +84,7 @@ const planDeEstudiosData = {
             },
             {
               "codigo": "4062",
-              "asignatura": "Álgebra y Geometría Analítica",
+              "asignatura": "Álgebra y Geometría Analítica II",
               "horas_semanales": 4,
               "total_horas": 64,
               "correlatividad": "4054"
@@ -163,8 +163,8 @@ const planDeEstudiosData = {
             {
               "codigo": "4071",
               "asignatura": "Higiene, Seguridad e Ingeniería Ambiental",
-              "horas_semanales": null,
-              "total_horas": null,
+              "horas_semanales": 4,
+              "total_horas": 64,
               "correlatividad": "4063/4066"
             },
             {
