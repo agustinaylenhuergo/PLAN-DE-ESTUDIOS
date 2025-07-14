@@ -155,7 +155,7 @@ const planDeEstudiosData = {
           "materias": [
             {
               "codigo": "4070",
-              "asignatura": "Tecnología de Materiales y Procesos",
+              "asignatura": "Tecnología de Materiales y Procesos 1",
               "horas_semanales": 4,
               "total_horas": 64,
               "correlatividad": "4069"
@@ -221,10 +221,10 @@ const planDeEstudiosData = {
             },
             {
             "codigo": "4078",
-            "asignatura": "Mecánica Técnica", // Corregí el nombre de esta materia que estaba duplicado
+            "asignatura": "Tecnología de Materiales y Procesos 2",
             "horas_semanales": 4,
             "total_horas": 64,
-            "correlatividad": "4062/4068" // Corregí la correlatividad si es el caso
+            "correlatividad": "4070"
             },
             {
               "codigo": "4079",
